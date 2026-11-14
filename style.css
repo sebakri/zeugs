@@ -203,11 +203,11 @@ a:hover {
 .pronunciation {
   margin: 0.8rem 0 0.9rem;
   color: var(--muted);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-family: "Noto Sans", "DejaVu Sans", "Segoe UI", Roboto, system-ui, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.9rem;
 }
 
-.pronunciation span {
+.pronunciation span[aria-hidden] {
   margin-inline: 0.35rem;
   color: var(--accent);
 }
