@@ -7,7 +7,7 @@ window.ZEUGS_APPS = [
     icon: "assets/draw.png",
     status: "Available",
     released: true,
-    releaseUrl: "https://codeberg.org/sebdev/draw/releases/latest",
+    releaseUrl: "https://github.com/sebakri/zeugs/releases",
     downloadLabel: "Download for macOS",
     detail: "Universal DMG · Draw_<version>_universal.dmg"
   },

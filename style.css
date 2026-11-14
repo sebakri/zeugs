@@ -126,8 +126,7 @@ a:hover {
 }
 
 .wordmark span,
-.hero__period,
-.tool-card__mark span {
+.hero__period {
   color: var(--accent);
 }
 
@@ -237,26 +236,6 @@ a:hover {
 .text-link:hover {
   text-decoration: underline;
 }
-
-.hero__stamp {
-  position: absolute;
-  right: 0.2rem;
-  bottom: 3.8rem;
-  display: grid;
-  width: 106px;
-  height: 106px;
-  place-content: center;
-  transform: rotate(7deg);
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  color: var(--muted);
-  font-size: 0.62rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  line-height: 1.55;
-  text-align: center;
-}
-
 .section {
   padding-block: 4.4rem;
 }
@@ -317,9 +296,7 @@ a:hover {
   display: block;
   width: 72px;
   height: 72px;
-  border: 1px solid var(--line);
-  border-radius: 1rem;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .status,
@@ -431,16 +408,11 @@ a:hover {
 }
 
 .tool-card__mark {
-  display: grid;
+  display: block;
   width: 54px;
   height: 54px;
-  place-items: center;
-  border: 1px solid var(--line);
   border-radius: 0.85rem;
-  background: var(--panel);
-  font-size: 1.6rem;
-  font-weight: 800;
-  letter-spacing: -0.08em;
+  object-fit: cover;
 }
 
 .tool-card__heading {
@@ -478,61 +450,6 @@ a:hover {
 .tool-card__links .text-link {
   font-size: 0.8rem;
 }
-
-.library-note {
-  grid-column: 2;
-  margin: -0.35rem 0 0;
-  color: var(--muted);
-  font-size: 0.78rem;
-}
-
-.library-note code {
-  color: var(--text);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.95em;
-}
-
-.principles-section {
-  padding-bottom: 4.8rem;
-}
-
-.principles-list {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin: 0;
-  padding: 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  list-style: none;
-}
-
-.principles-list li {
-  display: flex;
-  min-height: 112px;
-  gap: 0.75rem;
-  padding: 1.1rem 0.85rem 1.1rem 0;
-  color: var(--muted);
-  font-size: 0.8rem;
-}
-
-.principles-list li + li {
-  padding-left: 0.85rem;
-  border-left: 1px solid var(--line);
-}
-
-.principles-list strong {
-  color: var(--text);
-  font-size: 0.84rem;
-}
-
-.principle-number {
-  flex: 0 0 auto;
-  color: var(--accent);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.7rem;
-  font-weight: 700;
-}
-
 .site-footer {
   min-height: 76px;
   display: flex;
@@ -575,20 +492,6 @@ a:hover {
 }
 
 @media (max-width: 760px) {
-  .principles-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .principles-list li:nth-child(3) {
-    border-left: 0;
-    padding-left: 0;
-    border-top: 1px solid var(--line);
-  }
-
-  .principles-list li:nth-child(4) {
-    border-top: 1px solid var(--line);
-  }
-
   .tools-inner {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -596,13 +499,7 @@ a:hover {
 
   .tool-card {
     grid-template-columns: 58px minmax(0, 1fr) auto;
-  }
-
-  .library-note {
-    grid-column: 1;
-    margin-top: -0.35rem;
-  }
-}
+  }}
 
 @media (max-width: 560px) {
   .page-width,
@@ -634,15 +531,6 @@ a:hover {
     min-height: 350px;
     padding-block: 3.25rem 3rem;
   }
-
-  .hero__stamp {
-    right: 0;
-    bottom: 2.6rem;
-    width: 78px;
-    height: 78px;
-    font-size: 0.52rem;
-  }
-
   .section {
     padding-block: 3.2rem;
   }
@@ -683,21 +571,6 @@ a:hover {
     flex-wrap: wrap;
     gap: 0.85rem;
   }
-
-  .principles-list li {
-    min-height: 122px;
-    padding-right: 0.55rem;
-    font-size: 0.76rem;
-  }
-
-  .principles-list li + li {
-    padding-left: 0.55rem;
-  }
-
-  .principles-list li:nth-child(3) {
-    padding-left: 0;
-  }
-
   .site-footer {
     min-height: 70px;
     flex-wrap: wrap;
@@ -709,26 +582,4 @@ a:hover {
   }
 }
 
-@media (max-width: 380px) {
-  .hero__stamp {
-    display: none;
-  }
-
-  .principles-list {
-    grid-template-columns: 1fr;
-  }
-
-  .principles-list li,
-  .principles-list li + li,
-  .principles-list li:nth-child(3),
-  .principles-list li:nth-child(4) {
-    min-height: 0;
-    padding: 0.85rem 0;
-    border-top: 1px solid var(--line);
-    border-left: 0;
-  }
-
-  .principles-list li:first-child {
-    border-top: 0;
-  }
-}
+@media (max-width: 380px) {}

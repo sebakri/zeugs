@@ -4,9 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#eff1f5">
-    <meta name="description" content="zeugs makes small, local-first desktop tools for documents.">
-    <title>zeugs — desktop tools for documents</title>
-    <link rel="icon" href="assets/draw.png" type="image/png">
+    <meta name="description" content="Small, local-first desktop tools for developers.">
+    <meta property="og:title" content="zeugs — small tools for developers">
+    <meta property="og:description" content="Small, local-first desktop tools for developers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sebakri.github.io/zeugs/">
+    <link rel="canonical" href="https://sebakri.github.io/zeugs/">
+    <title>zeugs — small tools for developers</title>
+    <link rel="icon" href="assets/zeugs.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/zeugs.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <script src="apps-data.js" defer></script>
     <script src="app.js" defer></script>
@@ -17,7 +23,6 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a href="#apps">Apps</a>
         <a href="#tools">Tools</a>
-        <a href="#principles">Principles</a>
       </nav>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">Dark theme</button>
     </header>
@@ -27,9 +32,8 @@
         <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span> Small tools. Room to think.</p>
         <h1 id="hero-title">zeugs<span class="hero__period" aria-hidden="true">.</span></h1>
         <p class="pronunciation">[t͡sɔɪ̯ks] <span aria-hidden="true">·</span> “things” or “stuff”</p>
-        <p class="hero__description">Small, local-first desktop tools for documents.</p>
+        <p class="hero__description">Small, local-first desktop tools for developers.</p>
         <a class="text-link" href="#apps">Explore the apps <span aria-hidden="true">↓</span></a>
-        <div class="hero__stamp" aria-hidden="true">ONE WINDOW<br>ONE JOB</div>
       </section>
 
       <section class="section page-width" id="apps" aria-labelledby="apps-title">
@@ -38,11 +42,11 @@
             <p class="eyebrow">The collection</p>
             <h2 id="apps-title">Apps</h2>
           </div>
-          <p class="section-heading__note">Built for focused work. Your files stay yours.</p>
+          <p class="section-heading__note">Built for focused work. Your work stays yours.</p>
         </div>
         <div class="app-grid" id="app-list" aria-live="polite" aria-label="zeugs apps"></div>
         <noscript>
-          <p class="noscript-note">Turn on JavaScript to see the app list. Draw is available at <a href="https://codeberg.org/sebdev/draw/releases/latest">its latest release page</a>.</p>
+          <p class="noscript-note">Turn on JavaScript to see the app list. Draw is available at <a href="https://github.com/sebakri/zeugs/releases">its latest release page</a>.</p>
         </noscript>
       </section>
 
@@ -53,7 +57,7 @@
             <h2 id="tools-title">Tools</h2>
           </div>
           <article class="tool-card" aria-labelledby="box-title">
-            <div class="tool-card__mark" aria-hidden="true">B<span>.</span></div>
+            <img class="tool-card__mark" src="assets/box.png" alt="" aria-hidden="true" width="54" height="54">
             <div class="tool-card__body">
               <div class="tool-card__heading">
                 <h3 id="box-title">Box</h3>
@@ -62,34 +66,16 @@
               <p>A policy, approval, and audit layer for AI agents.</p>
             </div>
             <div class="tool-card__links">
-              <a class="text-link" href="https://github.com/sebakri/box" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
-              <a class="text-link" href="https://github.com/sebakri/box/releases/latest" target="_blank" rel="noopener noreferrer">Latest release <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+              <a class="text-link" href="https://github.com/sebakri/zeugs/releases" target="_blank" rel="noopener noreferrer">Latest release <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
             </div>
           </article>
-          <p class="library-note"><code>@suite/ui</code> is the shared component library and Catppuccin theme used by the apps.</p>
         </div>
-      </section>
-
-      <section class="section page-width principles-section" id="principles" aria-labelledby="principles-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">How we work</p>
-            <h2 id="principles-title">Shared rules</h2>
-          </div>
-          <p class="section-heading__note">Small tools should feel like they belong together.</p>
-        </div>
-        <ul class="principles-list">
-          <li><span class="principle-number">01</span><span><strong>One window, one job.</strong><br>No tabs, accounts, or cloud.</span></li>
-          <li><span class="principle-number">02</span><span><strong>Local first.</strong><br>Files stay on your machine.</span></li>
-          <li><span class="principle-number">03</span><span><strong>The same look.</strong><br>Latte and Mocha. Flat surfaces. Thin borders.</span></li>
-          <li><span class="principle-number">04</span><span><strong>No known vulnerabilities.</strong><br>Fix security findings before release.</span></li>
-        </ul>
       </section>
     </main>
 
     <footer class="site-footer page-width">
       <a class="wordmark wordmark--small" href="#top">zeugs<span aria-hidden="true">.</span></a>
-      <p>Small, local-first desktop tools for documents.</p>
+      <p>Small, local-first desktop tools for developers.</p>
       <a class="back-to-top" href="#top">Back to top ↑</a>
     </footer>
   </body>
