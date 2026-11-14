@@ -27,3 +27,6 @@ GitHub Pages hosts this site at `https://sebakri.github.io/zeugs/`. Commit all s
 ```
 
 The script splits the committed `site/` folder and pushes the split to the `main` branch of `sebakri/zeugs`. Use `--force` only when you need to replace an existing `main` branch.
+## Feature requests and bugs
+
+Visitors open issues in the GitHub repo. The `.github/ISSUE_TEMPLATE/` folder holds the forms. The publish script sends it with the rest of `site/`.

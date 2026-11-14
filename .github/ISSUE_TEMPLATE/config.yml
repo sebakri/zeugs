@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a question or share an idea
+    url: https://github.com/sebakri/zeugs/discussions
+    about: Use Discussions for open questions. Use Issues for concrete bugs and requests.
