@@ -34,7 +34,7 @@ window.ZEUGS_APPS = [
     name: "note",
     slug: "note",
     assetUrlTemplate: "https://github.com/sebakri/zeugs/releases/download/note-v{version}/Note_{version}_universal.dmg",
-    description: "A note-taking app for Markdown and Quarkdown files on disk.",
+    description: "A note-taking app for Markdown notes and Excalidraw drawings on disk.",
     icon: "assets/note.png",
     status: "Not released yet",
     released: false
