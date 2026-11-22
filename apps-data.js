@@ -36,7 +36,10 @@ window.ZEUGS_APPS = [
     assetUrlTemplate: "https://github.com/sebakri/zeugs/releases/download/note-v{version}/Note_{version}_universal.dmg",
     description: "A note-taking app for Markdown notes and Excalidraw drawings on disk.",
     icon: "assets/note.png",
-    status: "Not released yet",
-    released: false
+    status: "Available",
+    released: true,
+    releaseUrl: "https://github.com/sebakri/zeugs/releases",
+    downloadLabel: "Download for macOS",
+    detail: "Universal DMG · Note_<version>_universal.dmg"
   }
 ];
