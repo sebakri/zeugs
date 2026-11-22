@@ -10,7 +10,7 @@ window.ZEUGS_APPS = [
     released: true,
     releaseUrl: "https://github.com/sebakri/zeugs/releases",
     downloadLabel: "Download for macOS",
-    detail: "Universal DMG · Draw_<version>_universal.dmg"
+    detail: "Universal DMG"
   },
   {
     name: "Table",
@@ -40,6 +40,7 @@ window.ZEUGS_APPS = [
     released: true,
     releaseUrl: "https://github.com/sebakri/zeugs/releases",
     downloadLabel: "Download for macOS",
-    detail: "Universal DMG · Note_<version>_universal.dmg"
+    detail: "Universal DMG · Note_{version}_universal.dmg",
+    version: "0.1.0"
   }
 ];

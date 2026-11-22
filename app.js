@@ -9,7 +9,14 @@
     return element;
   }
 
+  function fill(value, version) {
+    return version ? String(value).split("{version}").join(version) : value;
+  }
+
   apps.forEach((app) => {
+    const version = typeof app.version === "string" ? app.version : "";
+    const download = app.assetUrlTemplate ? fill(app.assetUrlTemplate, version) : "";
+    const detail = app.detail ? fill(app.detail, version) : "";
     const card = make("article", "app-card");
     const top = make("div", "app-card__top");
     const image = make("img", "app-card__icon");
@@ -29,14 +36,16 @@
     card.append(make("p", "app-card__description", app.description));
 
     const actions = make("div", "app-card__actions");
-    if (app.released && app.releaseUrl) {
+    if (app.released && (download || app.releaseUrl)) {
       const link = make("a", "button button--primary", app.downloadLabel || "View latest release");
-      link.href = app.releaseUrl;
+      // The versioned asset is the download; the releases page is the fallback
+      // while an app has no release yet.
+      link.href = download && !download.includes("{version}") ? download : app.releaseUrl;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
       link.setAttribute("aria-label", `${app.downloadLabel || "View latest release"} for ${app.name} (opens in a new tab)`);
       actions.append(link);
-      if (app.detail) actions.append(make("p", "app-card__detail", app.detail));
+      if (detail && !detail.includes("{version}")) actions.append(make("p", "app-card__detail", detail));
     } else {
       const button = make("button", "button button--disabled", "Coming soon");
       button.type = "button";
