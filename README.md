@@ -1,6 +1,8 @@
 # zeugs site
 
-This folder holds the static landing page for zeugs, a suite of small, local-first desktop tools for developers.
+This folder holds the static landing page for zeugs, a suite of small, local-first desktop apps.
+
+The page lists applications only. It does not list command-line tools. All page data is in `apps-data.js`, so the page makes no API calls and needs no network beyond its own files.
 
 ## Preview
 
@@ -14,7 +16,7 @@ Open `http://localhost:8000` in a browser.
 
 ## Add a release entry
 
-Edit `apps-data.js` to add or update an app release. Set `released` to `true`, then set `releaseUrl`, `downloadLabel`, and `detail`. Use the release page at `https://github.com/sebakri/zeugs/releases`. Releases use tags such as `draw-v0.2.0` and `box-v0.7.3`.
+Edit `apps-data.js` to add or update an app release. Set `released` to `true`, then set `releaseUrl`, `downloadLabel`, and `detail`. Use the release page at `https://github.com/sebakri/zeugs/releases`. Releases use tags such as `draw-v0.2.0` and `note-v0.1.0`.
 
 For an app that is not released, set `released` to `false` and give it a status such as `Not released yet`.
 
@@ -32,7 +34,7 @@ The version command uses `svu next --tag.prefix <app>-v --tag.pattern '<app>-v*'
 
 Version preparation updates the npm package and lock file, `build/config.yml`, and `APP_VERSION` where present. It uses the Wails build-assets generator in a temporary folder for the two macOS plists and Windows version metadata. It checks that other metadata stays the same. Note's macOS build also sets `note/internal/app.Version` through linker flags. No Go version source needs a release edit.
 
-The app registry is in `scripts/release-lib.sh`. Box can join there when its package and verification steps are ready. Box and suite-ui have no release task now. Existing tags are not moved. A retry needs the tag at `HEAD` with matching version files. Release notes use the matching `CHANGELOG.md` section, or app-scoped conventional commits since the previous app tag.
+The app registry is in `scripts/release-lib.sh`. Box can join there when its package and verification steps are ready. Box has no release task now. Existing tags are not moved. A retry needs the tag at `HEAD` with matching version files. Release notes use the matching `CHANGELOG.md` section, or app-scoped conventional commits since the previous app tag.
 
 ## Publish
 

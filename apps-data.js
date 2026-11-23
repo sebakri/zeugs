@@ -25,7 +25,7 @@ window.ZEUGS_APPS = [
     name: "pdf",
     slug: "pdf",
     assetUrlTemplate: "https://github.com/sebakri/zeugs/releases/download/pdf-v{version}/Pdf_{version}_universal.dmg",
-    description: "Opens a PDF, changes the text of a line, and saves the file.",
+    description: "A lightweight PDF editor.",
     icon: "assets/pdf.png",
     status: "Not released yet",
     released: false
@@ -40,7 +40,16 @@ window.ZEUGS_APPS = [
     released: true,
     releaseUrl: "https://github.com/sebakri/zeugs/releases",
     downloadLabel: "Download for macOS",
-    detail: "Universal DMG · Note_{version}_universal.dmg",
+    detail: "Universal DMG",
     version: "0.1.0"
+  },
+  {
+    name: "sweep",
+    slug: "sweep",
+    assetUrlTemplate: "https://github.com/sebakri/zeugs/releases/download/sweep-v{version}/Sweep_{version}_universal.dmg",
+    description: "A disk cleaner for caches, models, VMs, and node_modules.",
+    icon: "assets/sweep.png",
+    status: "Not released yet",
+    released: false
   }
 ];

@@ -248,13 +248,11 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
-.section-heading .eyebrow,
-.tools-inner > div:first-child .eyebrow {
+.section-heading .eyebrow {
   margin-bottom: 0.35rem;
 }
 
-.section-heading h2,
-.tools-inner h2 {
+.section-heading h2 {
   margin: 0;
   font-size: clamp(1.8rem, 5vw, 2.5rem);
   font-weight: 740;
@@ -299,8 +297,7 @@ a:hover {
   object-fit: contain;
 }
 
-.status,
-.tool-tag {
+.status {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -384,72 +381,6 @@ a:hover {
   font-size: 0.72rem;
 }
 
-.tools-section {
-  border-block: 1px solid var(--line);
-  background: var(--panel);
-}
-
-.tools-inner {
-  display: grid;
-  grid-template-columns: minmax(120px, 0.7fr) minmax(0, 2fr);
-  align-items: center;
-  gap: 1.1rem 2rem;
-}
-
-.tool-card {
-  display: grid;
-  grid-template-columns: 58px minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.2rem;
-  border: 1px solid var(--line);
-  border-radius: 0.75rem;
-  background: var(--bg);
-}
-
-.tool-card__mark {
-  display: block;
-  width: 54px;
-  height: 54px;
-  border-radius: 0.85rem;
-  object-fit: cover;
-}
-
-.tool-card__heading {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-}
-
-.tool-card__heading h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  letter-spacing: -0.04em;
-}
-
-.tool-tag {
-  min-height: auto;
-  padding: 0.2rem 0.45rem;
-  font-size: 0.65rem;
-}
-
-.tool-card__body p {
-  margin: 0.2rem 0 0;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
-.tool-card__links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.25rem;
-  white-space: nowrap;
-}
-
-.tool-card__links .text-link {
-  font-size: 0.8rem;
-}
 .site-footer {
   min-height: 76px;
   display: flex;
@@ -490,16 +421,6 @@ a:hover {
   white-space: nowrap;
   clip-path: inset(50%);
 }
-
-@media (max-width: 760px) {
-  .tools-inner {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .tool-card {
-    grid-template-columns: 58px minmax(0, 1fr) auto;
-  }}
 
 @media (max-width: 560px) {
   .page-width,
@@ -554,23 +475,6 @@ a:hover {
     min-height: 0;
   }
 
-  .tool-card {
-    grid-template-columns: 48px minmax(0, 1fr);
-    gap: 0.8rem;
-    padding: 1rem;
-  }
-
-  .tool-card__mark {
-    width: 46px;
-    height: 46px;
-  }
-
-  .tool-card__links {
-    grid-column: 2;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.85rem;
-  }
   .site-footer {
     min-height: 70px;
     flex-wrap: wrap;
