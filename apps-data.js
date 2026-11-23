@@ -46,7 +46,7 @@ window.ZEUGS_APPS = [
     releaseUrl: "https://github.com/sebakri/zeugs/releases",
     downloadLabel: "Download for macOS",
     detail: "Universal DMG",
-    version: "0.1.0"
+    version: "0.2.0"
   },
   {
     name: "sweep",
