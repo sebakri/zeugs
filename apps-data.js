@@ -10,7 +10,8 @@ window.ZEUGS_APPS = [
     released: true,
     releaseUrl: "https://github.com/sebakri/zeugs/releases",
     downloadLabel: "Download for macOS",
-    detail: "Universal DMG"
+    detail: "Universal DMG",
+    version: "0.3.0"
   },
   {
     name: "Table",
@@ -18,8 +19,12 @@ window.ZEUGS_APPS = [
     assetUrlTemplate: "https://github.com/sebakri/zeugs/releases/download/table-v{version}/Table_{version}_universal.dmg",
     description: "A Bigtable viewer for local and remote instances.",
     icon: "assets/table.png",
-    status: "Not released yet",
-    released: false
+    status: "Available",
+    released: true,
+    releaseUrl: "https://github.com/sebakri/zeugs/releases",
+    downloadLabel: "Download for macOS",
+    detail: "Universal DMG",
+    version: "0.1.0"
   },
   {
     name: "pdf",
