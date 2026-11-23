@@ -48,3 +48,7 @@ The script splits the committed `site/` folder and pushes the split to the `main
 ## Feature requests and bugs
 
 Visitors open issues in the GitHub repo. The `.github/ISSUE_TEMPLATE/` folder holds the forms. The publish script sends it with the rest of `site/`.
+
+## Install script
+
+`install.sh` installs an app from its GitHub release: it downloads the DMG and its checksum, stops on a mismatch, copies the app to `/Applications` and removes the quarantine flag. The apps are ad-hoc signed and not notarized, so a browser download is blocked by macOS. The cards show the command `curl -fsSL https://sebakri.github.io/zeugs/install.sh | sh -s -- <app>`. Set `ZEUGS_VERSION` or `ZEUGS_DEST` to override the version or the target folder. The script is plain POSIX shell.

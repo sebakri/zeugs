@@ -46,6 +46,14 @@
       link.setAttribute("aria-label", `${app.downloadLabel || "View latest release"} for ${app.name} (opens in a new tab)`);
       actions.append(link);
       if (detail && !detail.includes("{version}")) actions.append(make("p", "app-card__detail", detail));
+      const command = `curl -fsSL https://sebakri.github.io/zeugs/install.sh | sh -s -- ${app.slug}`;
+      const install = make("button", "app-card__install", command);
+      install.type = "button";
+      install.title = "Copy the install command";
+      install.addEventListener("click", () => {
+        if (navigator.clipboard) navigator.clipboard.writeText(command).then(() => { install.dataset.copied = "true"; setTimeout(() => delete install.dataset.copied, 1500); });
+      });
+      actions.append(make("p", "app-card__detail", "Or install in Terminal, which also skips the macOS block:"), install);
     } else {
       const button = make("button", "button button--disabled", "Coming soon");
       button.type = "button";
